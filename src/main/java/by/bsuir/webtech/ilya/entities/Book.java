@@ -28,6 +28,16 @@ public class Book extends  Entity{
         this.title = title;
         this.id = id;
     }
+    public Book(Long id,String author,String title,int price,String genre,String description,Date publicationDate)
+    {
+        this.author = author;
+        this.genre = genre;
+        this.price = price;
+        this.title = title;
+        this.id = id;
+        this.description = description;
+        this.publicationDate = publicationDate;
+    }
 
     public Date getPublicationDate() {
         return publicationDate;

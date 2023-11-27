@@ -33,9 +33,14 @@
                     <input type = "hidden" name = "command" value = "BUY_BOOK_COMMAND">
                 </form>
                 <form action="/books" method="post">
-                    <button type="submit" text="Delte">Delete</button>
+                    <button type="submit">Delete</button>
                     <input type="hidden" id="delete_book_id" name="book_id" value=${book.id} >
                     <input type = "hidden" name = "command" value = "DELETE_BOOK_COMMAND">
+                </form>
+                <form action="/books/edit" method="post">
+                    <button type="submit"> Edit book info</button>
+                    <input type="hidden" name="command" value="EDIT_BOOK_PAGE_COMMAND">
+                    <input type="hidden" name="book_id" value=${book.id}>
                 </form>
                 <br>
             </c:forEach>

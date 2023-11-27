@@ -19,7 +19,7 @@
     <label >Password</label>
     <input type="password"  id="password" name="password" required>
     <input type="hidden" name="operation" value="login">
-    <button type="submit" href="/books" >Submit</button>
+    <button type="submit" >Submit</button>
 </form>
 </body>
 </html>

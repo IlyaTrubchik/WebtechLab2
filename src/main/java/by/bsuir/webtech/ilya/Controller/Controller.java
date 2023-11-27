@@ -31,8 +31,9 @@ public class Controller extends HttpServlet {
         if( (command = commandHelper.getCommand(commandName)) != null)
         {
             String page = command.execute(req);
-            RequestDispatcher dispatcher = req.getRequestDispatcher(page);
-            dispatcher.forward(req,resp);
+            String contextPath = req.getContextPath();
+            String targetUrl = contextPath + page;
+            req.getRequestDispatcher(targetUrl).forward(req, resp);
         }
     }
 }

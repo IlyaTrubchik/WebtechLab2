@@ -16,6 +16,8 @@ public class CommandHelper {
         commands.put(CommandName.AUTHORIZATION_PAGE_COMMAND, new LoginPageCommand());
         commands.put(CommandName.REGISTRATION_PAGE_COMMAND, new RegistrationPageCommand());
         commands.put(CommandName.VIEW_BOOKS_COMMAND,new GetBooksCommand());
+        commands.put(CommandName.EDIT_BOOK_PAGE_COMMAND,new EditBookPageCommand());
+        commands.put(CommandName.CONFIRM_BOOK_EDIT_COMMAND,new EditBookConfirmCommand());
     }
     public static CommandHelper getInstance()
     {
