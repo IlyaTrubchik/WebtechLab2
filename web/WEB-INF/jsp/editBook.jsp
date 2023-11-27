@@ -22,6 +22,7 @@
             <input type="text" name="price" value="${book.price}" required>
             <input type="date" name="publicationDate" value="${book.publicationDate}" required>
             <input type="hidden" name="book_id" value="${book.id}">
+            <<button type="submit"> Confirm changes </button>
         </form>
 </body>
 </html>
