@@ -13,7 +13,7 @@
 <body>
  <h>It's register page</h>
  <form action="/register" method="post">
-     <input type="hidden" name="command" value="registration">
+     <input type="hidden" name="command" value="REGISTRATION_COMMAND">
          <label >Login</label>
          <input type="text"  id="login" name="login" required>
          <label >Name</label>
@@ -24,7 +24,6 @@
          <input type="text"  id="address" name="address" required>
          <label >Password</label>
          <input type="password"  id="password" name="password" required>
-     <input type="hidden" name="operation" value="registration">
      <button type="submit" >Submit</button>
  </form>
 </body>

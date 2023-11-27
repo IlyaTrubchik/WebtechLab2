@@ -13,13 +13,13 @@
 <body>
 <h>It's login page</h>
 <form action="/login" method="post">
-    <input type="hidden" id="command" name="command" value="login">
+    <input type="hidden" id="command" name="command" value="AUTHORIZATION_COMMAND">
     <label >Email</label>
     <input type="text"  id="login" name="login" required>
     <label >Password</label>
     <input type="password"  id="password" name="password" required>
     <input type="hidden" name="operation" value="login">
-    <button type="submit" >Submit</button>
+    <button type="submit" href="/books" >Submit</button>
 </form>
 </body>
 </html>

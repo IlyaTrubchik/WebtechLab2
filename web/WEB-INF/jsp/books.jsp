@@ -16,22 +16,49 @@
 
 <body>
 <h1>Books</h1>
-    <div>
-        <c:forEach items="${books}" var="book">
-            <br>
-            <tr>
-                <td>${book.title}</td>
-                <td>${book.author}</td>
-                <td>${book.genre}</td>
-                <td>${book.price}</td>
-            </tr>
-                <form action="/books?command=orderBook" method="post">
-                    <button type="submit" text="Buy">Submit</button>
-                    <input type="hidden"  id="book_id" name="book_id" value=${book.id} >
+<div>
+    <c:choose>
+        <c:when test="${not empty sessionScope.role && sessionScope.role eq 'ADMINISTRATOR'}">
+            <c:forEach items="${books}" var="book">
+                <br>
+                <tr>
+                    <td>${book.title}</td>
+                    <td>${book.author}</td>
+                    <td>${book.genre}</td>
+                    <td>${book.price}</td>
+                </tr>
+                <form action="/books" method="post">
+                    <button type="submit" text="Buy">Buy</button>
+                    <input type="hidden"   name="book_id" value=${book.id} >
+                    <input type = "hidden" name = "command" value = "BUY_BOOK_COMMAND">
                 </form>
-            <br>
-        </c:forEach>
-    </div>
+                <form action="/books" method="post">
+                    <button type="submit" text="Delte">Delete</button>
+                    <input type="hidden" id="delete_book_id" name="book_id" value=${book.id} >
+                    <input type = "hidden" name = "command" value = "DELETE_BOOK_COMMAND">
+                </form>
+                <br>
+            </c:forEach>
+        </c:when>
+        <c:otherwise>
+            <c:forEach items="${books}" var="book">
+                <br>
+                <tr>
+                    <td>${book.title}</td>
+                    <td>${book.author}</td>
+                    <td>${book.genre}</td>
+                    <td>${book.price}</td>
+                </tr>
+                <form action="/books" method="post">
+                    <button type="submit" text="Buy">Submit</button>
+                    <input type="hidden"   name="book_id" value=${book.id} >
+                    <input type = "hidden" name = "command" value = "BUY_BOOK_COMMAND">
+                </form>
+                <br>
+            </c:forEach>
+        </c:otherwise>
+    </c:choose>
+</div>
 </body>
 </body>
 </html>

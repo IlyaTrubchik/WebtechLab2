@@ -1,4 +1,4 @@
-package by.bsuir.webtech.ilya.model;
+package by.bsuir.webtech.ilya.logic;
 
 import jakarta.servlet.http.HttpServletRequest;
 

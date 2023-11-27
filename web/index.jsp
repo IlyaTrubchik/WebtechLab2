@@ -11,8 +11,17 @@
     <title>$Title$</title>
   </head>
   <body>
-    <button onclick="location.href='/register?command=registration'">Register account</button>
-    <button onclick="location.href='/login?command=login'">Login in account</button>
-    <button onclick="location.href='/books?command=viewbooks'">View books</button>
+      <form action="/register" method="post">
+         <input type="hidden" name="command" value="REGISTRATION_PAGE_COMMAND">
+         <button type="submit"> Registration </button>
+      </form>
+      <form action="/login" method="post">
+        <input type="hidden" name="command" value="AUTHORIZATION_PAGE_COMMAND">
+        <button type="submit"> Authorization </button>
+      </form>
+      <form action="/books" method="post">
+        <input type="hidden" name="command" value="VIEW_BOOKS_COMMAND">
+        <button type="submit"> Books </button>
+      </form>
   </body>
 </html>
